@@ -1,0 +1,364 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/* Reset HTML */
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration:none;
+}
+
+li{
+    list-style:none;
+}
+
+:root{
+    --poppins:"Poppins",sans-serif;
+
+    --main-color:#2E4ECA;
+    --second-color:#F9F9F9;
+    --light-blue: #CFE8FF;
+	--grey: #eee;
+	--dark-grey: #AAAAAA;
+	--dark: #342E37;
+	--red: #DB504A;
+	--yellow: #FFCE26;
+	--light-yellow: #FFF2C6;
+	--orange: #FD7238;
+	--light-orange: #FFE0D3;
+}
+
+body {
+	background: var(--grey);
+	overflow-x: hidden;
+}
+
+#content{
+    position:relative;
+    transition: .3s ease;
+
+    font-family: var(--poppins);
+}
+
+
+/* Nav Bar */
+
+#content nav{
+    height: 60px;
+    background: var(--second-color);
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    grid-gap: 24px;
+    position: sticky;
+
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+#content nav::before {
+	content: '';
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	bottom: -40px;
+	left: 0;
+	border-radius: 50%;
+	box-shadow: -20px -20px 0 var(--light);
+}
+
+#content nav a {
+	color: var(--dark);
+}
+#content nav .nav-link {
+	font-size: 20px;
+	transition: .3s ease;
+    color:var(--main-color);
+    text-decoration: none;
+}
+#content nav .nav-link:hover {
+	color: var(--yellow);
+}
+
+
+#content nav form {
+	max-width: 400px;
+	width: 100%;
+	position: relative;
+    left:calc(100% - 500px);
+    margin-right: auto;
+}
+#content nav form .form-search {
+    
+	display: flex;
+	align-items: center;
+	height: 36px;
+}
+#content nav form .form-search input {
+	flex-grow: 1;
+	padding: 0 16px;
+	height: 100%;
+	border: 1px solid var(--main-color);
+	background: var(--light);
+	border-radius: 36px 0 0 36px;
+	outline: none;
+	width: 100%;
+	color: var(--dark);
+}
+#content nav form .form-search button {
+
+	width: 36px;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: var(--main-color);
+	color: var(--second-color);
+	font-size: 18px;
+	border: none;
+	outline: none;
+	border-radius: 0 36px 36px 0;
+	cursor: pointer;
+}
+
+#content main {
+	width: 100%;
+	padding: 20px 24px;
+	font-family: var(--poppins);
+	max-height: calc(100vh - 56px);
+	overflow-y: auto;
+}
+#content main .head-title {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	grid-gap: 16px;
+	flex-wrap: wrap;
+}
+
+#content main .head-title .btn-add {
+	
+    position: absolute;
+    left:calc(100% - 180px);
+    font-size: small;
+    text-decoration: none;
+	height: 40px;
+	padding: 0 16px;
+	border-radius: 36px;
+	background: var(--main-color);
+	color: var(--second-color);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	grid-gap: 10px;
+	font-weight: 500;
+}
+
+
+#content main .box-info {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	grid-gap: 24px;
+	margin-top: 36px;
+	margin-bottom:20px;
+}
+#content main .box-info li {
+	padding: 24px;
+	background: var(--second-color);
+	border-radius: 20px;
+	display: flex;
+	align-items: center;
+	grid-gap: 24px;
+}
+#content main .box-info li .bx {
+	width: 80px;
+	height: 80px;
+	border-radius: 10px;
+	font-size: 36px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#content main .box-info li:nth-child(1) .bx {
+	background: var(--light-blue);
+	color: var(--blue);
+}
+#content main .box-info li:nth-child(2) .bx {
+	background: var(--light-orange);
+	color: var(--orange);
+}
+#content main .box-info li .text h3 {
+	font-size: 24px;
+	font-weight: 600;
+	color: var(--dark);
+}
+#content main .box-in fo li .text p {
+	color: var(--dark);	
+}
+
+#content main .book-open {
+    display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	grid-gap: 24px;
+	margin-top: 36px;
+    margin-left: 20px;
+	margin-bottom:20px;
+    
+}
+
+
+#content main .book-open div.book-list {
+    margin-left: 30px;
+	margin-bottom:10px;
+	height: 80px;
+	border-radius: 10px;
+	/* font-size: 36px; */
+	display: flex;
+	/* justify-content: center; */
+	align-items: center;
+}
+
+#content .img{
+	width: 80px;
+	height: 90px;
+		/* max-width:30px; */
+	object-fit: cover;
+	margin-right:5px;
+	/* padding:10px; */
+	/* margin:10px; */
+	/* border-radius: 50%; */
+	/* object-fit: cover;  */
+}
+#content div.book-open div.book-list span.text{
+	min-width:120px
+}
+#content div.book-open div.book-list span.text p{
+	font-size:13px;
+}
+
+#content div.book-open div.book-list span.btn{
+	/* max-width:50px; */
+	/* display:block; */
+	height:100%;
+}
+
+#content div.book-open div.book-list span.btn div.btn{
+	display: flex;
+}
+
+#content div.book-open div.book-list span.btn div.btn button{
+	/* position:absolute; */
+	margin-right:0;
+	margin-left:auto;
+	height:20px;
+	width:20px;
+	padding:0;
+	border:none;
+}
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+	border-radius: 20px;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+  .input_section {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+}
+
+.input_section > h2 {
+    text-align: center;
+}
+
+.input_section > form > .input {
+    margin: 8px 0;
+	
+}
+
+.input_section > form > button {
+    background-color: var(--main-color);
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.input_section > form > button > span {
+    font-weight: bold;
+}
+
+.input_section > form > .input > input {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+
+}
+
+.error {
+	font-size: small;
+	color: #DB504A;
+	
+}
+
+.input_section > form > .input > label {
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+.input_section > form > .input_inline {
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+}
+
+.input_section > form > .input_inline > label {
+    color: var(--main-color);
+    font-weight: bold;
+    margin-right: 10px;
+}

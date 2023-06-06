@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bukuku:D</title>
+
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style-book.css" />
+  </head>
+  <body>
+    <section id="content">
+      <nav>
+        <a href="#" class="nav-link">bukuku</a>
+        <form action="#">
+          <div class="form-search">
+            <input id="searchBookTitle" type="search" placeholder="Search..." />
+            <button id="searchSubmit" class="btn-search">
+              <i class="bx bx-search"></i>
+            </button>
+          </div>
+        </form>
+      </nav>
+      <main>
+        <div class="head-title">
+          <button id="myBtn" class="btn-add">
+            <i class="bx bx-book-add"></i>
+            <span class="text">Tambah Buku</span>
+          </button>
+        </div>
+        <ul class="box-info">
+          <li id="bookOpen">
+            <i class="bx bx-book-open"></i>
+            <span class="text">
+              <h3>0</h3>
+              <p>Buku sudah dibaca</p>
+            </span>
+          </li>
+          <li  id="bookClose">
+            <i class="bx bx-book"></i>
+            <span class="text">
+              <h3>0</h3>
+              <p>Buku blm dibaca</p>
+            </span>
+          </li>
+        </ul>
+
+        <h4 id="searchText"></h4>
+        <div id="searchResult" class="book-open">
+   
+        </div>
+        <h4 class="text">Buku sudah dibaca</h4>
+        <div id="completeBookshelfList" class="book-open">
+        
+        </div>
+
+        <h4 class="text">Buku blm dibaca</h4>
+        <div id="incompleteBookshelfList" class="book-open">
+        
+        </div>
+
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <section class="input_section">
+              <h2>Masukkan Buku Baru</h2>
+              <form id="inputBook">
+                <div class="input">
+                  <label for="inputBookTitle">Judul</label>
+                  <input id="inputBookTitle" type="text" required />
+                </div>
+                <div class="input">
+                  <label for="inputBookAuthor">Penulis</label>
+                  <input id="inputBookAuthor" type="text" required />
+                </div>
+                <div class="input">
+                  <label for="inputBookYear">Tahun</label>
+                  <input id="inputBookYear" type="number" required />
+                </div>
+                <div class="input_inline">
+                  <label for="inputBookIsComplete">Selesai dibaca</label>
+                  <input id="inputBookIsComplete" type="checkbox" />
+                </div>
+                <span id="error" class="error"></span>
+                <button id="bookSubmit" type="submit">
+                  Masukkan Buku ke rak <span>Belum selesai dibaca</span>
+                </button>
+              </form>
+            </section>
+          </div>
+        </div>
+      </main>
+
+      <script src="js/main-book.js"></script>
+    </section>
+  </body>
+</html>
